@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>StreamAzul IPTV – Teste grátis e atendimento no WhatsApp</title>
+<title>Upplay – Teste grátis e atendimento no WhatsApp</title>
 <meta name="description" content="Canais, filmes e séries em qualquer tela. Gere seu teste grátis e fale com a gente no WhatsApp Business.">
 <meta name="theme-color" content="#071a45">
-<meta property="og:title" content="StreamAzul IPTV – Teste grátis">
+<meta property="og:title" content="Upplay – Teste grátis">
 <meta property="og:description" content="Teste grátis por 4 horas e atendimento automático no WhatsApp.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="css/style.css">
@@ -14,13 +14,16 @@
 <body>
 
 <header class="topbar">
-  <strong class="brand" style="margin:0">📡 Stream<span>Azul</span></strong>
+  <strong class="brand" style="margin:0">📡 Up<span>play</span></strong>
   <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">☰</button>
 </header>
 <div class="scrim" id="scrim" hidden></div>
 
 <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
-  <p class="brand">📡 Stream<span>Azul</span></p>
+  <div class="sidehead">
+    <p class="brand">📡 Up<span>play</span></p>
+    <button class="hidebtn" id="hideSide" type="button" aria-label="Ocultar menu lateral" title="Ocultar menu">◀</button>
+  </div>
   <nav>
     <ul>
       <li><a href="#inicio" class="active">Início</a></li>
@@ -35,7 +38,7 @@
   <div class="side-foot">
     <button class="btn ghost" id="fontBtn" type="button">A+ Letra maior</button>
     <button class="btn ghost" id="themeBtn" type="button" aria-pressed="false">🌙 Modo noite</button>
-    <a class="btn wa" data-wa="Olá! Quero saber mais sobre o IPTV." href="#" target="_blank" rel="noopener">WhatsApp Business</a>
+    <a class="btn wa" data-wa="Olá, Upplay! Tenho interesse em seus serviços. Gostaria de saber como funciona." href="#" target="_blank" rel="noopener">WhatsApp Business</a>
   </div>
 </aside>
 
@@ -163,9 +166,9 @@
 </main>
 
 <footer>
-  <p><strong>StreamAzul IPTV</strong> – atendimento automatizado via WhatsApp Business.</p>
+  <p><strong>Upplay</strong> – atendimento automatizado via WhatsApp Business.</p>
   <p><button class="linkbtn" data-dlg="dlgTermos">Termos de uso</button><button class="linkbtn" data-dlg="dlgPriv">Política de privacidade</button></p>
-  <p>© <span id="ano"></span> StreamAzul. Todos os direitos reservados.</p>
+  <p>© <span id="ano"></span> Upplay. Todos os direitos reservados.</p>
 </footer>
 </div>
 
@@ -173,9 +176,10 @@
   <a href="#teste"><span>🎁</span>Teste</a>
   <a href="#planos"><span>💳</span>Planos</a>
   <a href="#instalar"><span>📲</span>Instalar</a>
-  <a class="wa" data-wa="Olá! Preciso de ajuda com o IPTV." href="#" target="_blank" rel="noopener"><span>💬</span>Pessoa</a>
+  <a class="wa" data-wa="Olá, Upplay! Tenho interesse em seus serviços. Gostaria de saber como funciona." href="#" target="_blank" rel="noopener"><span>💬</span>Pessoa</a>
 </nav>
-<a class="btn wa fab" data-wa="Olá! Preciso de ajuda com o IPTV." href="#" target="_blank" rel="noopener" aria-label="Falar com uma pessoa no WhatsApp">💬 Falar com uma pessoa</a>
+<button class="showbtn" id="showSide" type="button" aria-label="Mostrar menu lateral">☰ Menu</button>
+<a class="btn wa fab" data-wa="Olá, Upplay! Tenho interesse em seus serviços. Gostaria de saber como funciona." href="#" target="_blank" rel="noopener" aria-label="Falar com uma pessoa no WhatsApp">💬 Falar com uma pessoa</a>
 
 <dialog id="dlgTermos" aria-labelledby="tT"><h3 id="tT">Termos de uso</h3><p>O teste é gratuito, dura 4 horas e é limitado a um por WhatsApp e por aparelho. O acesso é pessoal e não pode ser revendido ou compartilhado. Podemos suspender acessos usados de forma indevida. Os planos e preços podem mudar com aviso prévio.</p><p style="color:var(--muted);font-size:.85rem">Texto de exemplo: revise com um profissional antes de publicar.</p><form method="dialog"><button class="btn">Fechar</button></form></dialog>
 <dialog id="dlgPriv" aria-labelledby="tP"><h3 id="tP">Política de privacidade</h3><p>Coletamos nome, WhatsApp e tipo de aparelho apenas para gerar o teste e fazer o atendimento. Não vendemos seus dados. Você pode pedir a exclusão deles a qualquer momento pelo WhatsApp, conforme a LGPD.</p><p style="color:var(--muted);font-size:.85rem">Texto de exemplo: revise com um profissional antes de publicar.</p><form method="dialog"><button class="btn">Fechar</button></form></dialog>

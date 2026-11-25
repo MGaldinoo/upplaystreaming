@@ -16,7 +16,7 @@ $("#planGrid").innerHTML = PLANOS.map(p => `
     <p class="price">R$ ${p.preco} <small>${p.per}</small></p>
     ${p.mes !== p.preco ? `<p class="hint" style="margin:-.3rem 0 .6rem">equivale a R$ ${p.mes} por mês</p>` : ""}
     <ul>${p.itens.map(i => `<li>${i}</li>`).join("")}</ul>
-    <a class="btn wa" target="_blank" rel="noopener" href="${wa("Olá! Quero assinar o plano " + p.nome + ".")}">Assinar pelo WhatsApp</a>
+    <a class="btn wa" target="_blank" rel="noopener" href="${wa("Olá, Upplay! Tenho interesse em contratar o plano " + p.nome + " (R$ " + p.preco + " " + p.per + "). Gostaria de saber as formas de pagamento e como é feita a ativação. Obrigado(a)!")}">Assinar pelo WhatsApp</a>
   </article>`).join("");
 document.querySelectorAll("[data-wa]").forEach(a => a.href = wa(a.dataset.wa));
 $("#ano").textContent = new Date().getFullYear();
@@ -97,6 +97,18 @@ scrim.onclick = () => toggleMenu(false);
 side.querySelectorAll("nav a").forEach(a => a.addEventListener("click", () => toggleMenu(false)));
 document.addEventListener("keydown", e => { if(e.key === "Escape") toggleMenu(false); });
 
+/* Ocultar o menu lateral no desktop */
+function setSide(hidden){
+  document.body.classList.toggle("side-hidden", hidden);
+  side.inert = hidden && matchMedia("(min-width:901px)").matches;
+  try{ localStorage.setItem("menuOculto", hidden ? "1" : "0"); }catch(e){}
+}
+$("#hideSide").onclick = () => setSide(true);
+$("#showSide").onclick = () => setSide(false);
+let oc = null; try{ oc = localStorage.getItem("menuOculto"); }catch(e){}
+if(oc === "1") setSide(true);
+matchMedia("(min-width:901px)").addEventListener("change", () => setSide(document.body.classList.contains("side-hidden")));
+
 /* Destaca o item do menu da seção visível */
 const links = [...side.querySelectorAll("nav a")];
 const io = new IntersectionObserver(es => es.forEach(e => {
@@ -141,8 +153,8 @@ function showResult(doc, repetido){
   clearInterval(window.tm);
   const tick = () => { const ms = doc.expira - Date.now(); $("#cLeft").textContent = ms > 0 ? `${Math.floor(ms/3600000)}h ${String(Math.floor(ms%3600000/60000)).padStart(2,"0")}min` : "Expirado"; };
   tick(); window.tm = setInterval(tick, 30000);
-  $("#resSub").href = wa(`Olá! Quero assinar. Meu usuário de teste: ${doc.user}`);
-  $("#resWa").href = wa(`Olá! Sou ${doc.nome}. Gerei um teste no site.\nUsuário: ${doc.user}\nSenha: ${doc.pass}\nAparelho: ${doc.aparelho}`);
+  $("#resSub").href = wa(`Olá, Upplay! Estou testando o serviço (usuário ${doc.user}) e gostaria de contratar um plano. Poderiam me informar as opções disponíveis e as formas de pagamento? Obrigado(a)!`);
+  $("#resWa").href = wa(`Olá, Upplay! Meu nome é ${doc.nome} e acabei de gerar um teste gratuito pelo site.\n\nAparelho: ${doc.aparelho}\nUsuário: ${doc.user}\nSenha: ${doc.pass}\n\nGostaria de receber as orientações para a instalação. Muito obrigado(a)!`);
   $("#result").hidden = false;
   $("#result").scrollIntoView({behavior:"smooth", block:"center"});
 }

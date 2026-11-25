@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StreamAzul IPTV – Teste grátis e atendimento no WhatsApp</title>
+<meta name="description" content="Canais, filmes e séries em qualquer tela. Gere seu teste grátis e fale com a gente no WhatsApp Business.">
+<meta name="theme-color" content="#071a45">
+<meta property="og:title" content="StreamAzul IPTV – Teste grátis">
+<meta property="og:description" content="Teste grátis por 4 horas e atendimento automático no WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <strong class="brand" style="margin:0">📡 Stream<span>Azul</span></strong>
+  <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+  <p class="brand">📡 Stream<span>Azul</span></p>
+  <nav>
+    <ul>
+      <li><a href="#inicio" class="active">Início</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+      <li><a href="#conteudo">Conteúdo</a></li>
+      <li><a href="#teste">Teste grátis</a></li>
+      <li><a href="#instalar">Como instalar</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+    </ul>
+  </nav>
+  <div class="side-foot">
+    <button class="btn ghost" id="fontBtn" type="button">A+ Letra maior</button>
+    <button class="btn ghost" id="themeBtn" type="button" aria-pressed="false">🌙 Modo noite</button>
+    <a class="btn wa" data-wa="Olá! Quero saber mais sobre o IPTV." href="#" target="_blank" rel="noopener">WhatsApp Business</a>
+  </div>
+</aside>
+
+<div class="content">
+<header>
+  <section class="hero" id="inicio" aria-labelledby="h-inicio">
+    <h1 id="h-inicio">Seus canais, filmes e séries em qualquer tela.</h1>
+    <p>Assista na TV, no celular, no tablet ou no computador. Peça um teste agora, sem cadastro demorado: o atendimento é automático e continua no WhatsApp.</p>
+    <div class="cta">
+      <a class="btn" href="#teste">Testar grátis agora</a>
+      <a class="btn ghost" href="#planos">Ver planos</a>
+    </div>
+  </section>
+</header>
+
+<main>
+  <section class="alt" id="passos" aria-labelledby="h-passos">
+    <h2 id="h-passos">É fácil: 3 passos</h2>
+    <ol class="steps">
+      <li><strong>Gere o teste</strong><p>Informe nome e WhatsApp. Leva menos de 1 minuto.</p><a href="#teste">Ir para o teste</a></li>
+      <li><strong>Instale</strong><p>Mostramos o passo a passo do seu aparelho.</p><a href="#instalar">Ver como instalar</a></li>
+      <li><strong>Assista</strong><p>Entre com o usuário e a senha e escolha o que ver.</p><a href="#conteudo">Ver o conteúdo</a></li>
+    </ol>
+  </section>
+
+  <section id="planos" aria-labelledby="h-planos">
+    <h2 id="h-planos">Planos</h2>
+    <p>Escolha o período. A ativação e o suporte acontecem pelo WhatsApp Business.</p>
+    <div class="grid" id="planGrid"></div>
+  </section>
+
+  <section id="recursos" class="alt" aria-labelledby="h-rec">
+    <h2 id="h-rec">O que você recebe</h2>
+    <div class="grid">
+      <article><h3>Todas as telas</h3><p>Android, iOS, Smart TV, TV Box, notebook e tablet com o mesmo acesso.</p></article>
+      <article><h3>Ativação automática</h3><p>Gere o teste aqui e receba os dados de acesso na hora.</p></article>
+      <article><h3>Suporte no WhatsApp</h3><p>Fale com a gente pelo WhatsApp Business, com resposta rápida.</p></article>
+      <article><h3>Qualidade ajustável</h3><p>HD e Full HD, com opção de reduzir a qualidade em conexões lentas.</p></article>
+    </div>
+  </section>
+
+  <section id="conteudo" aria-labelledby="h-cont">
+    <h2 id="h-cont">Muito para assistir</h2>
+    <p>Programação para toda a família, ao vivo e sob demanda.</p>
+    <div class="grid">
+      <article><h3>Canais ao vivo</h3><p>Abertos, esportes, notícias, documentários e variedades.</p></article>
+      <article><h3>Filmes</h3><p>Ação, comédia, drama, terror e lançamentos organizados por categoria.</p></article>
+      <article><h3>Séries</h3><p>Temporadas completas para assistir no seu ritmo.</p></article>
+      <article><h3>Infantil</h3><p>Desenhos e programas para as crianças, em uma seção própria.</p></article>
+    </div>
+  </section>
+
+  <section id="teste" class="alt" aria-labelledby="h-teste">
+    <h2 id="h-teste">Gere seu teste grátis</h2>
+    <p>Informe seus dados e receba um acesso de teste por 4 horas. Cada WhatsApp pode gerar um teste.</p>
+    <form id="testForm" novalidate>
+      <label>Nome
+        <input id="nome" name="nome" autocomplete="name" required minlength="2" placeholder="Seu nome">
+      </label>
+      <label>WhatsApp (com DDD)
+        <input id="zap" name="zap" inputmode="tel" autocomplete="tel" required placeholder="81 99999-9999">
+      </label>
+      <label>Aparelho
+        <select id="aparelho" name="aparelho">
+          <option>Smart TV</option><option>TV Box / Android TV</option><option>Celular Android</option><option>iPhone / iPad</option><option>Computador / Notebook</option><option>Tablet</option>
+        </select>
+      </label>
+      <div class="hp" aria-hidden="true"><input id="site" name="site" tabindex="-1" autocomplete="off"></div>
+      <label class="chk"><input type="checkbox" id="aceito"><span>Li e aceito os <button type="button" class="linkbtn" style="color:var(--primary);margin:0" data-dlg="dlgTermos">termos de uso</button> e a <button type="button" class="linkbtn" style="color:var(--primary);margin:0" data-dlg="dlgPriv">política de privacidade</button>.</span></label>
+      <p class="msg" id="msg" role="alert"></p>
+      <button class="btn" type="submit" id="gerar">Gerar teste</button>
+    </form>
+
+    <details style="margin:1.4rem 0;max-width:560px"><summary>Já gerou um teste? Veja o seu aqui</summary>
+      <form id="lookup" novalidate style="margin-top:1rem">
+        <label>WhatsApp usado no teste<input id="zap2" inputmode="tel" placeholder="81 99999-9999"></label>
+        <p class="msg" id="msg2" role="alert"></p>
+        <button class="btn ghost" type="submit">Ver meu teste</button>
+      </form>
+    </details>
+
+    <article class="result" id="result" hidden aria-live="polite">
+      <h3>Teste gerado ✔</h3>
+      <p id="resTxt"></p>
+      <div class="cred">
+        <span>Usuário:</span><strong id="cUser"></strong>
+        <span>Senha:</span><strong id="cPass"></strong>
+        <span>Válido até:</span><strong id="cExp"></strong>
+        <span>Tempo restante:</span><strong id="cLeft"></strong>
+      </div>
+      <div class="row">
+        <a class="btn wa" id="resWa" href="#" target="_blank" rel="noopener">Receber no WhatsApp</a>
+        <button class="btn ghost" type="button" id="copyBtn">Copiar dados</button>
+        <a class="btn" id="resSub" href="#" target="_blank" rel="noopener">Quero assinar</a>
+      </div>
+      <p style="margin:.8rem 0 0;color:var(--muted);font-size:.9rem">Próximo passo: veja <a href="#instalar">como instalar</a> no seu aparelho.</p>
+    </article>
+  </section>
+
+  <section id="instalar" aria-labelledby="h-inst">
+    <h2 id="h-inst">Como instalar</h2>
+    <p>Escolha seu aparelho. O aplicativo e a lista são indicados pelo nosso atendimento no WhatsApp.</p>
+    <p class="hint" id="detect" aria-live="polite"></p>
+    <div class="tabs" role="tablist" aria-label="Aparelho">
+      <button role="tab" aria-selected="true" data-tab="p1">Smart TV</button>
+      <button role="tab" aria-selected="false" data-tab="p2">Android e TV Box</button>
+      <button role="tab" aria-selected="false" data-tab="p3">iPhone e iPad</button>
+      <button role="tab" aria-selected="false" data-tab="p4">Computador</button>
+    </div>
+    <article class="panel" id="p1" role="tabpanel"><ol><li>Abra a loja de aplicativos da TV.</li><li>Instale o aplicativo indicado no WhatsApp.</li><li>Abra o aplicativo e digite o usuário e a senha do teste.</li><li>Escolha um canal e aproveite.</li></ol></article>
+    <article class="panel" id="p2" role="tabpanel" hidden><ol><li>Abra a Play Store.</li><li>Instale o aplicativo indicado no WhatsApp.</li><li>Entre com o usuário e a senha do teste.</li><li>Aguarde a lista carregar.</li></ol></article>
+    <article class="panel" id="p3" role="tabpanel" hidden><ol><li>Abra a App Store.</li><li>Instale o aplicativo indicado no WhatsApp.</li><li>Entre com o usuário e a senha do teste.</li><li>Aguarde a lista carregar.</li></ol></article>
+    <article class="panel" id="p4" role="tabpanel" hidden><ol><li>Instale o player indicado no WhatsApp.</li><li>Informe o usuário e a senha do teste.</li><li>Atualize a lista e escolha o conteúdo.</li></ol></article>
+  </section>
+
+  <section id="faq" class="alt" aria-labelledby="h-faq">
+    <h2 id="h-faq">Dúvidas frequentes</h2>
+    <details><summary>Como recebo o acesso?</summary><p>Logo após gerar o teste, você vê os dados na tela e pode enviá-los ao nosso WhatsApp Business.</p></details>
+    <details><summary>Quais aparelhos funcionam?</summary><p>Smart TVs, TV Box, Android, iPhone, iPad, tablets e computadores.</p></details>
+    <details><summary>Preciso pagar para testar?</summary><p>Não. O teste é gratuito e não pede cartão.</p></details>
+    <details><summary>Como assino depois?</summary><p>Escolha um plano e finalize a conversa pelo WhatsApp.</p></details>
+    <details><summary>Qual internet eu preciso?</summary><p>Recomendamos pelo menos 10 Mbps por tela para HD. Cabo de rede na TV costuma dar mais estabilidade que Wi-Fi.</p></details>
+    <details><summary>O teste não funcionou, e agora?</summary><p>Chame no WhatsApp pelo botão verde. Informe o aparelho e o que aparece na tela.</p></details>
+  </section>
+</main>
+
+<footer>
+  <p><strong>StreamAzul IPTV</strong> – atendimento automatizado via WhatsApp Business.</p>
+  <p><button class="linkbtn" data-dlg="dlgTermos">Termos de uso</button><button class="linkbtn" data-dlg="dlgPriv">Política de privacidade</button></p>
+  <p>© <span id="ano"></span> StreamAzul. Todos os direitos reservados.</p>
+</footer>
+</div>
+
+<nav class="bottombar" aria-label="Atalhos">
+  <a href="#teste"><span>🎁</span>Teste</a>
+  <a href="#planos"><span>💳</span>Planos</a>
+  <a href="#instalar"><span>📲</span>Instalar</a>
+  <a class="wa" data-wa="Olá! Preciso de ajuda com o IPTV." href="#" target="_blank" rel="noopener"><span>💬</span>Pessoa</a>
+</nav>
+<a class="btn wa fab" data-wa="Olá! Preciso de ajuda com o IPTV." href="#" target="_blank" rel="noopener" aria-label="Falar com uma pessoa no WhatsApp">💬 Falar com uma pessoa</a>
+
+<dialog id="dlgTermos" aria-labelledby="tT"><h3 id="tT">Termos de uso</h3><p>O teste é gratuito, dura 4 horas e é limitado a um por WhatsApp e por aparelho. O acesso é pessoal e não pode ser revendido ou compartilhado. Podemos suspender acessos usados de forma indevida. Os planos e preços podem mudar com aviso prévio.</p><p style="color:var(--muted);font-size:.85rem">Texto de exemplo: revise com um profissional antes de publicar.</p><form method="dialog"><button class="btn">Fechar</button></form></dialog>
+<dialog id="dlgPriv" aria-labelledby="tP"><h3 id="tP">Política de privacidade</h3><p>Coletamos nome, WhatsApp e tipo de aparelho apenas para gerar o teste e fazer o atendimento. Não vendemos seus dados. Você pode pedir a exclusão deles a qualquer momento pelo WhatsApp, conforme a LGPD.</p><p style="color:var(--muted);font-size:.85rem">Texto de exemplo: revise com um profissional antes de publicar.</p><form method="dialog"><button class="btn">Fechar</button></form></dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>

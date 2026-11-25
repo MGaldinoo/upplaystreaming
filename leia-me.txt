@@ -1,0 +1,13 @@
+StreamAzul IPTV - projeto (v2)
+
+Estrutura:
+  index.html       -> HTML semantico
+  css/style.css    -> estilos (azul, branco e preto, modo noite, responsivo)
+  js/script.js     -> logica (planos, tema, menu, teste, deteccao de aparelho, IndexedDB)
+
+Para editar:
+  - Numero do WhatsApp: constante WHATS no inicio de js/script.js
+  - Planos e precos: array PLANOS em js/script.js (campo mes = preco por mes)
+  - Backend: constante API_URL em js/script.js (vazio = modo demonstracao)
+
+Para usar: abra index.html no navegador ou envie a pasta para sua hospedagem.
